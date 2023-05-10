@@ -1,5 +1,5 @@
 /* --------- This is CSS Reset Code --------- */
-html, body, div, span, applet, object, iframe,
+html, body, button, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -16,7 +16,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font: sans-serif;
 	vertical-align: baseline;
 }
 
@@ -49,4 +49,45 @@ footer {
 	width: 100%;
 	justify-content: space-around;
 	align-items: center;
+}
+
+.recipe-card-container {
+	/* border: green solid 1px; */
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.recipe-card {
+	width: 300px;
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 2px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.recipe-card img {
+	width: 100%;
+}
+
+.recipe-card button {
+	width: 150px;
+	padding: 10px 30px;
+	margin: 15px 100px;
+	font-size: medium;
+	background-color: rgb(77, 147, 147);
+	color: white;
+	border: 0px;
+	font-size: 20px;
+	border-radius: 2px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.recipe-card h3 {
+	padding: 10px;
+	font-size: 32px;
+	font-weight: normal;
 }
