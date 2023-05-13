@@ -1,20 +1,11 @@
-import React from "react";
+import React from "react"
 import {Link, NavLink} from 'react-router-dom'
-import { useState } from "react";
+import { useState } from "react"
+import { BiSearchAlt2 } from "react-icons/bi";
 
-const Header = () => {
+const Header = props => {
 
-  const {search, setSearch} = useState('')
-
-  const recipeDisplay = recipes
-    .filter((recipe, index) => {
-        let title = recipe.recipe_name.toLowerCase()
-        let searchParams = search.toLowerCase()
-        return title.includes(searchParams)
-    })
-    .map((recipe, index) => {
-        return <RecipeCard recipe={recipe}/>
-    })
+  const {search, setSearch} = props
 
   return (
     <header>
@@ -28,10 +19,11 @@ const Header = () => {
         </NavLink>
       </nav>
       <span>
+        <BiSearchAlt2 size="2em" color="#DA7635" />
         <input
             type="text"
-            value={search}
             onChange={(e) => setSearch(e.target.value)}
+            value={search}
             placeholder="Search for a recipe"
         />
       </span>
